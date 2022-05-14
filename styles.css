@@ -1,0 +1,242 @@
+/* Root Variables */
+:root {
+    --clr-background: #F2EBBF;
+    --clr-foreground: #54454B;
+    --clr-primary: #970707;
+    --clr-secondary: #363636;
+}  
+
+/* Document Body Informations */
+html, body{
+    background-color: var(--clr-background);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+    color: var(--clr-foreground);
+}
+
+/* Horizontal row styling */
+hr {
+    border: 1px solid rgb(105, 105, 105);
+}
+
+/* Main Heading styling */
+.main-header {
+    color: var(--clr-foreground);
+    text-align: center;
+}
+
+.main-header h1{
+    font-size: 2em;
+    font-style: italic;
+}
+
+.main-header h2{
+    font-size: 1.50em;
+    color: var(--clr-primary);
+}
+
+/* Flexbox styling for the recipe introductions */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    margin: 50px 10px;
+}
+
+.container-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+
+    margin: 50px 10px;
+}
+.container-foodName {
+    font-size: 1.50em;
+    margin: 5px 0px;
+    color: var(--clr-secondary);
+}
+
+.container-image {
+    width: 300px;
+    border-radius: 8%;
+    border: 5px solid;   
+    border-color: var(--clr-primary);   
+}
+
+.container-summary {
+    flex: 1;
+    margin: 30px 25px;
+    font-size: 1.30em;
+}
+
+.container-summary ul{
+    margin: 30px 0px;
+}
+
+.container-summary a{
+    color: var(--clr-primary);
+    text-decoration: none;
+}
+
+.container-summary a:hover{
+    color: var(--clr-foreground);
+    text-decoration: underline;
+}
+
+.protip {
+    color: var(--clr-secondary);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Headings styling  */
+.headings {
+    font-size: 1.50em;
+    color: var(--clr-foreground);
+}
+
+.headings-center{
+    font-size: 1.50em;
+    color: var(--clr-foreground);
+    text-align: center;
+    margin: 10px;
+}
+
+/* Ingredients Styling */
+.ingredients-list {
+    font-size: 1.2em;
+    list-style: none;
+
+    display: block;
+    position: relative;
+    margin: 0.15em 0.5em 0.15em 0;
+    padding: 0;
+}
+
+.ingredients-list li {
+    display: block;
+    padding: 0.25em;
+    border-bottom: 1px solid var(--clr-foreground);
+}
+
+.ingredients-list li:nth-of-type(2n){
+    background-color: #29627e48;
+}
+
+.ingredients-list li:hover {
+    color: black;
+    background-color: var(--clr-primary);
+}
+
+/* Cooking Procedure Styling */
+.cooking-procedure {
+    flex: 1;
+    margin: 30px 25px;
+    font-size: 1.30em;
+}
+
+.cooking-procedure label {
+    color: var(--clr-secondary);
+    font-size: 1.50em;
+}
+
+.cooking-procedure h2 {
+    color: var(--clr-primary);
+    font-size: 1.20em;
+    padding: 15px 0px;
+}
+
+/* Go To Top Styling */
+.goto-top {
+    font-size: 1.50em;
+    color: var(--clr-foreground);
+    text-align: center;
+    margin: 10px;
+}
+
+/* Grid Box Styling for Recipe Nutritions */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 1rem;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.grid-box > div {
+    font-size: 1rem;
+    background-color: var(--clr-background);
+    border-radius: 0.2em;
+    border: 1px solid;
+    box-shadow: 0.2em 0.2em 0.25em rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.grid-box > div h4 {
+    display: block;
+    padding: 0.2em 0.5em;
+    background: var(--clr-primary);
+    color: var(--clr-background);
+    text-align: center;
+}
+
+.grid-box > div p {
+    display: block;
+    padding: 0.2em 0.5em;
+    text-align: center;
+    font-size: 0.95em;
+}
+
+/* Cook's Notes Styling */
+.cooks-notes {
+    margin: 10px;
+}
+
+.cooks-notes > h2 {
+    color: var(--clr-secondary);
+    font-size: 1.8em;
+    padding: 3px;
+}
+
+.cooks-notes p {
+    color: var(--clr-foreground);
+    font-size: 1.3em;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+/* @Media Queries for Mobile Device Adjustment */
+@media screen and (max-width:640px){
+    html, body{
+        background-color: var(--clr-background);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--clr-foreground);
+        font-size: 1em;
+    }
+
+    .container fieldset{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex: 1;
+    
+        margin: 50px 10px;
+    }
+
+    .goto-top {
+        font-size: 1.8em;
+        color: var(--clr-foreground);
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+/* @Media Queries for User Preferences */
+@media (prefers-contrast: no-preference) {
+
+}
+@media (prefers-color-scheme: dark) {
+
+}
